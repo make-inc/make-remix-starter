@@ -9,7 +9,12 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: true
+  },
   plugins: [
+    
     remix({
       future: {
         v3_fetcherPersist: true,
