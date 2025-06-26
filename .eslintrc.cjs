@@ -23,6 +23,12 @@ module.exports = {
 
   // Base config
   extends: ["eslint:recommended"],
+  rules: {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "no-debugger": "warn",
+    "no-undef": "warn",
+  },
 
   overrides: [
     // React
@@ -48,6 +54,14 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/display-name": "off",
+        "react/no-unescaped-entities": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+      },
     },
 
     // Typescript
@@ -71,6 +85,13 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "import/no-unresolved": "warn",
+      },
     },
 
     // Node

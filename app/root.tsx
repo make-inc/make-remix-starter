@@ -30,6 +30,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+
+        {/* --- IMPORTANT: DO NOT REMOVE THIS SCRIPT --- */}
+        <script
+          src="https://cdn.make.inc/preview-bridge/latest/bridge.js"
+          type="module"
+        ></script>
       </head>
       <body>
         {children}

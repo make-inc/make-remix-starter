@@ -1,6 +1,7 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { visualEditorPlugin } from 'makelabs/vite'
 
 declare module "@remix-run/node" {
   interface Future {
@@ -9,6 +10,10 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: true
+  },
   plugins: [
     remix({
       future: {
@@ -20,5 +25,6 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
+    visualEditorPlugin(),
   ],
 });
